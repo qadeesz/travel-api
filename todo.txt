@@ -12,3 +12,10 @@ recomend method is
 protected $observer = [
     Travel::class => [TravelObserver::class],
 ]
+
+php artisan make:controller Api/V1/TravelController
+php artisan make:resource TravelResource
+
+php artisan make:test TravelListTest
+
+php artisan make:factory TravelFactory --model=Travel
