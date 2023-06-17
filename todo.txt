@@ -1,0 +1,14 @@
+generaly laravel model have prurals 
+but travel is regular word and we make sure that in migration and model is travels
+
+observer 
+created method is called before the method of controller
+creating method is called after the method of controller
+
+observer call in event services provider
+2 ways
+in boot metohod
+recomend method is
+protected $observer = [
+    Travel::class => [TravelObserver::class],
+]
