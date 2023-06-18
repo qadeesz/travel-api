@@ -19,3 +19,21 @@ php artisan make:resource TravelResource
 php artisan make:test TravelListTest
 
 php artisan make:factory TravelFactory --model=Travel
+
+
+php artisan make:controller Api/V1/TourController
+php artisan make:resource TourResource
+
+   // :slug is not defined because travevl model set route key name global 
+    Route::get('travels/{travel}/tours', [TourController::class, 'index']);
+    public function getRouteKeyName()  {
+        return 'slug';
+    }
+
+
+php artisan make:test ToursListTest
+php artisan make:factory TourFactory --model=Tour
+
+php artisan make:command CreateUserCommand
+
+php artisan make:sedder RoleSedder
