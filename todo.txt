@@ -36,4 +36,6 @@ php artisan make:factory TourFactory --model=Tour
 
 php artisan make:command CreateUserCommand
 
-php artisan make:sedder RoleSedder
+php artisan make:seeder RoleSedder
+
+php artisan db:seed --class=RoleSeeder
